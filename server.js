@@ -226,11 +226,6 @@ customSiteTitle: 'SatganzDevs - Api || Docs',
 }));
 
 
-app.get('/favicon.ico', (req, res) => {
-res.sendFile(__dirname + '/public/favicon.ico');
-});
-
-
 app.listen(PORT, () => {
 console.log(`Server berjalan di https://${process.env.REPL_SLUG}.${process.env.REPL_OWNER}.repl.co`);
 });
