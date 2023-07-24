@@ -228,5 +228,6 @@ customSiteTitle: 'SatganzDevs - Api || Docs',
 
 
 app.listen(PORT, () => {
-console.log(`Server berjalan di https://${process.env.REPL_SLUG}.${process.env.REPL_OWNER}.repl.co`);
+const deployedUrl = process.env.VERCEL_URL || `http://localhost:${PORT}`;
+  console.log(`Server berjalan di ${deployedUrl}`);
 });
