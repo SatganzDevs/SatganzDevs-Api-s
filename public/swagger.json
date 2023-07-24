@@ -1,0 +1,415 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "SatganzDevs-Api",
+    "description": "Powered By ❤️ Satganz Devs",
+    "contact": {
+      "name": "SatganzDevs"
+    },
+    "x-logo": {
+      "url": "https://i.ibb.co/CmW6JST/image.jpg",
+      "altText": "SatganzDevs Logo"
+    }
+  },
+  "paths": {
+    "/stalker/github/{username}": {
+      "get": {
+        "summary": "Stalk a GitHub user",
+        "description": "Get information about a GitHub user by their username",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "description": "GitHub username of the user to stalk",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "apikey",
+            "in": "query",
+            "required": true,
+            "description": "API key to authenticate the request",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GitHubUser"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized. Invalid API key.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/downloader/tiktokimage": {
+      "get": {
+        "summary": "Download TikTok Photolog",
+        "description": "Download photolog from a TikTok URL",
+        "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "required": true,
+            "description": "TikTok URL of the photolog to download",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "apikey",
+            "in": "query",
+            "required": true,
+            "description": "API key to authenticate the request",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TikTokPhotolog"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized. Invalid API key.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/downloader/tiktok": {
+      "get": {
+        "summary": "Download TikTok video",
+        "description": "Download a TikTok video by URL",
+        "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "required": true,
+            "description": "TikTok URL of the video to download",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "apikey",
+            "in": "query",
+            "required": true,
+            "description": "API key to authenticate the request",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TikTokVideoDownload"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized. Invalid API key.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/search/youtube": {
+      "get": {
+        "summary": "Search YouTube videos",
+        "description": "Search for YouTube videos by query",
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "required": true,
+            "description": "Query string for searching YouTube videos",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "apikey",
+            "in": "query",
+            "required": true,
+            "description": "API key to authenticate the request",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/YouTubeVideo"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized. Invalid API key.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/downloader/youtube": {
+      "get": {
+        "summary": "Download YouTube video",
+        "description": "Download a YouTube video by URL",
+        "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "required": true,
+            "description": "YouTube URL of the video to download",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "apikey",
+            "in": "query",
+            "required": true,
+            "description": "API key to authenticate the request",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/YouTubeVideoDownload"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized. Invalid API key.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "GitHubUser": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "creator": {
+            "type": "string"
+          },
+          "username": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "avatarUrl": {
+            "type": "string"
+          },
+          "bio": {
+            "type": "string"
+          },
+          "followers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "numOfRepos": {
+            "type": "integer"
+          }
+        }
+      },
+      "TikTokPhotolog": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "creator": {
+            "type": "string"
+          },
+          "result": {
+            "type": "object",
+            "properties": {
+              "author": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "video": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "TikTokVideoDownload": {
+        "type": "object",
+        "properties": {
+          "videoUrl": {
+            "type": "string"
+          },
+          "creator": {
+            "type": "string"
+          }
+        }
+      },
+      "YouTubeVideo": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "creator": {
+            "type": "string"
+          }
+        }
+      },
+      "YouTubeVideoDownload": {
+        "type": "object",
+        "properties": {
+          "videoUrl": {
+            "type": "string"
+          },
+          "creator": {
+            "type": "string"
+          }
+        }
+      },
+      "Error": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,143 @@
+/* ===================================================================
+ * fonts.scss
+ *
+ * ------------------------------------------------------------------- */
+
+
+/*
+ * montserrat
+================================================================================ */
+
+@font-face {
+  font-family: "montserrat-black";
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "montserrat-extrabold";
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "montserrat-bold";
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "montserrat-semibold";
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "montserrat-medium";
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "montserrat-regular";
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "montserrat-light";
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "montserrat-extralight";
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "montserrat-thin";
+  font-style: normal;
+  font-weight: normal;
+}
+
+
+/*
+ * Muli
+================================================================================ */
+
+@font-face {
+  font-family: "muli-extrabold";
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "muli-extrabold-italic";
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "muli-bold";
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "muli-bold-italic";
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "muli-semibold";
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "muli-semibold-italic";
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "muli-regular";
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "muli-italic";
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "muli-light";
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "muli-light-italic";
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "muli-extralight";
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "muli-extralight-italic";
+  font-style: normal;
+  font-weight: normal;
+}
+
+
+/*# sourceMappingURL=fonts.css.map */
