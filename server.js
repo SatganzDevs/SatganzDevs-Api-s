@@ -213,15 +213,16 @@ res.sendFile(__dirname + '/public/register.html');
 app.get('/price', (req, res) => {
 res.sendFile(__dirname + '/public/price.html');
 });
-
-const customCss = `
+app.get('/public/*', (req, res) => {
+const filePath = path.join(__dirname, req.url);
+res.sendFile(filePath);
+});
+app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument, {
+customCss: `
 .swagger-ui .topbar-wrapper .link {
 display: none;
 }
-`;
-
-app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument, {
-customCss: customCss,
+`,
 customSiteTitle: 'SatganzDevs - Api || Docs', 
 }));
 
