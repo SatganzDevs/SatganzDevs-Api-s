@@ -13,7 +13,7 @@
     }
   },
   "paths": {
-    "/stalker/github": {
+    "/stalk/github": {
       "get": {
         "summary": "Stalk a GitHub user",
         "description": "Get information about a GitHub user by their username",
