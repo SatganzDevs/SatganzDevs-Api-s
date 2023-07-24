@@ -13,14 +13,14 @@
     }
   },
   "paths": {
-    "/stalker/github/{username}": {
+    "/stalker/github": {
       "get": {
         "summary": "Stalk a GitHub user",
         "description": "Get information about a GitHub user by their username",
         "parameters": [
           {
             "name": "username",
-            "in": "path",
+            "in": "query",
             "required": true,
             "description": "GitHub username of the user to stalk",
             "schema": {
